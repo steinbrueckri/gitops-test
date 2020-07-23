@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: delay
+  name: delay
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: delay
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: delay
+    spec:
+      containers:
+      - image: steinbrueckri/debug
+        name: debug
+        resources: {}
+status: {}
